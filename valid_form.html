@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script language="Javascript">
+            function check(form)
+            {         
+                     //valid name
+                if(form.urname.value=="")
+                 { alert("please enter your name!"); }
+                else
+                 { alert("Hi "+form.urname.value + " !Name ok!"); }
+                  
+                    //valid age
+                if(form.age.value < 0 ||form.age.value=="")
+                  {alert("age should be grater than 0"); }
+                else
+                 { alert("Age ok"); }
+
+                   //valid email
+                if(form.email.value=="" || form.email.value.indexOf('@',0)==-1)
+                   { alert("no valid Email"); }
+                else
+                 { alert("Email ok!"); }
+
+                    //valid message
+                if(form.urmessage.vale=="")
+                 { alert("No message written"); }
+                else
+                 { alert("Message Ok"); }
+            }
+
+        </script>
+    </head>
+    <body>
+       <h2><u>Form Validation</u></h2> 
+       <form name="first">
+        Enter your name:<input type="text" name="urname"><br><br>
+        Enter your age:<input type="text" name="age"><br><br>
+        Enter your email:<input type="text" name="email"><br><br>
+        Write Message: <textarea name="urmessage" rows="5" cols="30"></textarea><br><br>
+        <input type="button" name="validate" value="check input" onclick="check(this.form)">
+       </form>
+    </body>
+</html>
